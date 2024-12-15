@@ -1,0 +1,27 @@
+@use "../../styles" as global;
+:host {
+  width: 100%;
+}
+
+.tab-titles {
+  display: flex;
+  border-bottom: whitesmoke 1px solid;
+  width: fit-content;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem 0;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  width: 10rem;
+}
+.tab-button.active {
+  border-bottom: global.$secondary-color 1px solid;
+}
+
+.tab-content {
+  padding: 20px;
+}

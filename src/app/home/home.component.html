@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <app-hero-action (callParent)="add()"></app-hero-action>
+  </div>
+  <div>
+    <h6 class="title">Activities</h6>
+    <div class="container">
+      <div *ngFor="let activity of activityComponentReserveQueue.activities" [@slideRight]>
+        <app-activity [data]="activity.data"></app-activity>
+      </div>
+    </div>
+  </div>
+</div>

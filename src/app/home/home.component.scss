@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+}
+
+.title {
+  margin-left: 1rem;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 1rem;
+}

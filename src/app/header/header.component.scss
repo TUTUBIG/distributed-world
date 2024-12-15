@@ -1,0 +1,66 @@
+@use '../../styles' as global;
+
+:host {
+  width: 100%;
+}
+
+.main {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  border-bottom: whitesmoke thin solid;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  flex-grow: 1;
+  justify-content: end;
+}
+.menu {
+  .active {
+    background-color: global.$secondary-color;
+  }
+}
+
+.menu {
+  button {
+    padding: 8px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+  }
+}
+
+.menu button:hover {
+  background-color: global.$secondary-hover-color;
+  cursor: pointer;
+}
+
+.auth {
+  margin-left: 1rem;
+  button {
+    width: 10rem;
+    border-radius: 8px;
+    border-width: thin;
+    background-color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    &:hover {
+      background-color: global.$primary-hover-color;
+      cursor: pointer;
+    }
+  }
+}
+
+

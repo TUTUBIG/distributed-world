@@ -1,0 +1,22 @@
+<div>
+  <div class="tab-titles">
+    <button class="tab-button" [ngClass]="{'active': activeTab === 'Tab1'}" (click)="switchTab('Tab1')">
+      Live Games
+    </button>
+    <button class="tab-button" [ngClass]="{'active': activeTab === 'Tab2'}" (click)="switchTab('Tab2')">
+      My Bids
+    </button>
+  </div>
+
+  <div *ngIf="activeTab === 'Tab1'" class="tab-content">
+    <div *ngFor="let card of cardSet1">
+      <app-game-card [data]="card"></app-game-card>
+    </div>
+  </div>
+
+  <div *ngIf="activeTab === 'Tab2'" class="tab-content">
+    <div *ngFor="let card of cardSet2">
+      <app-game-card [data]="card"></app-game-card>
+    </div>
+  </div>
+</div>
