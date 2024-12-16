@@ -32,19 +32,22 @@ div {
 }
 
 .menu {
-  button {
+  span {
     padding: 8px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     border: none;
     border-radius: 8px;
     background-color: white;
+    &:hover {
+      background-color: global.$secondary-hover-color;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
-}
-
-.menu button:hover {
-  background-color: global.$secondary-hover-color;
-  cursor: pointer;
 }
 
 .auth {
