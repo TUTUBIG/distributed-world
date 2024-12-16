@@ -1,0 +1,6 @@
+<div class="pagination">
+  <span *ngFor="let page of pages" (click)="selectPage(page)" [class.selected]="selectedPage === page" class="page-btn"
+    [ngClass]="{ 'ellipsis': page === '...' }">
+  {{ page }}
+  </span>
+</div>

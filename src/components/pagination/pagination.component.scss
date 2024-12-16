@@ -1,0 +1,35 @@
+@use '../../styles' as global;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-btn {
+  padding: 1px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.page-btn:hover {
+  color: white;
+  background-color: global.$harmonize-hover-color;
+}
+
+.selected {
+  background-color: global.$harmonize-color;
+  color: white;
+}
+
+.ellipsis {
+  pointer-events: none;
+
+}

@@ -8,7 +8,7 @@ import {HistoryComponent} from './history/history.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, GameLibraryComponent, HistoryComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, HistoryComponent],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.scss'

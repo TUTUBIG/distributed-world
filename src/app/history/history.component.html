@@ -1,0 +1,26 @@
+<main class="main">
+  <div class="title">
+    <span>Name</span>
+    <span>Action</span>
+    <span>Amount</span>
+    <span>Time</span>
+    <span></span>
+  </div>
+  <div class="data">
+    <div class="row" *ngFor="let history of histories">
+      <span>{{history.name}}</span>
+      <span>{{history.action}}</span>
+      <span>
+        <span>{{history.amount}}</span>
+        <span>{{history.symbol}}</span>
+      </span>
+      <span>{{history.timestamp}}</span>
+      <span class="button">
+        <a href="{{history.timestamp}}">View History</a>
+      </span>
+    </div>
+  </div>
+  <div class="pagination">
+    <app-pagination [totalPages]="100"></app-pagination>
+  </div>
+</main>
