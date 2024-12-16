@@ -13,3 +13,12 @@ export class ActionRecord {
   symbol!: string
   timestamp!: string
 }
+
+export class HistoryRecord {
+  name!: string
+  action!: string
+  amount!: number
+  symbol!: string
+  timestamp!: string
+  transactionHash!: string
+}
