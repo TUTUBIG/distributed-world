@@ -1,5 +1,5 @@
-<main>
-  <h4>{{data.title!}}</h4>
+<main class="main">
+  <span class="title">{{data.title!}}</span>
   <div class="info">
     <div>
       <span>Hold Amount</span>
@@ -8,8 +8,19 @@
         <span>{{data.holdSymbol!}}</span>
       </div>
     </div>
+    <div>
+      <span>Holder</span>
+      <span>{{data.holder}}</span>
+    </div>
+    <div>
+      <span>{{data.holder!}}</span>
+      <span>{{data.deadline!}}</span>
+    </div>
   </div>
-  <div class="actions">
+  <div class="info history">
     <app-scroll-view></app-scroll-view>
+  </div>
+  <div class="bottom">
+    <button>Quick Bid</button>
   </div>
 </main>

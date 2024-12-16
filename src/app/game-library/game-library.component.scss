@@ -2,6 +2,12 @@
   width: 100%;
 }
 
+.banner {
+  display: block;
+  height: 50vh;
+  background-image: url("/cups.png");
+}
+
 .container {
   margin: 1rem 3rem;
 }

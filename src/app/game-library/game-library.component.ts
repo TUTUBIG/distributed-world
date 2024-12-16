@@ -5,7 +5,6 @@ import {TabviewComponent} from '../../components/tabview/tabview.component';
 @Component({
   selector: 'app-game-library',
   imports: [
-    NgOptimizedImage,
     TabviewComponent
   ],
   templateUrl: './game-library.component.html',

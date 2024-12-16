@@ -24,44 +24,59 @@ export class ScrollViewComponent {
       address: '0xaaeessax42234ds',
       amount: 5.43,
       symbol: 'ETH',
-      deadline: new Date().toDateString()
+      timestamp: new Date().toDateString()
     },
     {
       name: 'Bid',
       address: '0xaaeessax42234ds',
       amount: 5.43,
       symbol: 'ETH',
-      deadline: new Date().toDateString()
+      timestamp: new Date().toDateString()
     },
     {
       name: 'Bid',
       address: '0xaaeessax42234ds',
       amount: 5.43,
       symbol: 'ETH',
-      deadline: new Date().toDateString()
+      timestamp: new Date().toDateString()
     },
     {
       name: 'Bid',
       address: '0xaaeessax42234ds',
       amount: 5.43,
       symbol: 'ETH',
-      deadline: new Date().toDateString()
+      timestamp: new Date().toDateString()
     },
+    {
+      name: 'Bid',
+      address: '0xaaeessax42234ds',
+      amount: 5.43,
+      symbol: 'ETH',
+      timestamp: new Date().toDateString()
+    },
+    {
+      name: 'Bid',
+      address: '0xaaeessax42234ds',
+      amount: 5.43,
+      symbol: 'ETH',
+      timestamp: new Date().toDateString()
+    }
   ];
 
   loadMore(): void {
+    console.log("more")
     if (this.loading) {
       return
     }
     setTimeout(()=>{
       this.loading = true
-      this.actionRecords = [{
+      this.actionRecords.push({
         name: 'Bid',
         address: '0xaaeessax42234ds',
         amount: 5.43,
         symbol: 'ETH',
-        deadline: new Date().toDateString()
-      },...this.actionRecords]
+        timestamp: new Date().toDateString()
+      })
       this.loading = false
     },1000);
   }

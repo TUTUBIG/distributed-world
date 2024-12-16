@@ -1,15 +1,22 @@
 <main>
-  <div class="scroll-view" *ngIf="actionRecords.length > 0" infiniteScroll>
+  <div class="scroll-view" *ngIf="actionRecords.length > 0"
+       infinite-scroll
+       [infiniteScrollThrottle]="300"
+       [scrollWindow]="false"
+       (scrolled)="loadMore()"
+  >
     <div *ngFor="let record of actionRecords">
-      <div>
+      <div class="content">
         <span>{{record.address}}</span>
-        <div>
-          <div>
+        <div class="content line2">
+          <div class="content line2 column1">
             <span>{{record.name}}</span>
-            <span>{{record.amount}}</span>
-            <span>{{record.symbol}}</span>
+            <div>
+              <span>{{record.amount}}</span>
+              <span>{{record.symbol}}</span>
+            </div>
           </div>
-          <span>{{record.deadline}}</span>
+          <span>{{record.timestamp}}</span>
         </div>
       </div>
     </div>

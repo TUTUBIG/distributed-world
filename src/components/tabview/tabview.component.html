@@ -9,14 +9,24 @@
   </div>
 
   <div *ngIf="activeTab === 'Tab1'" class="tab-content">
-    <div *ngFor="let card of cardSet1">
-      <app-game-card [data]="card"></app-game-card>
+    <div class="tab-content scroll-view" *ngIf="cardSet1.length > 0" infinite-scroll [infiniteScrollThrottle]="300" [scrollWindow]="false" (scrolled)="loadMore(1)">
+      <div *ngFor="let card of cardSet1">
+        <app-game-card [data]="card"></app-game-card>
+      </div>
+    </div>
+    <div class="tab-content empty" *ngIf="cardSet1.length == 0">
+      Empty
     </div>
   </div>
 
   <div *ngIf="activeTab === 'Tab2'" class="tab-content">
-    <div *ngFor="let card of cardSet2">
-      <app-game-card [data]="card"></app-game-card>
+    <div class="tab-content scroll-view" *ngIf="cardSet2.length > 0" infinite-scroll [infiniteScrollThrottle]="300" [scrollWindow]="false" (scrolled)="loadMore(2)">
+      <div *ngFor="let card of cardSet2">
+        <app-game-card [data]="card"></app-game-card>
+      </div>
+    </div>
+    <div class="tab-content empty" *ngIf="cardSet2.length == 0">
+      <span>Empty</span>
     </div>
   </div>
 </div>

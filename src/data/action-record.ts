@@ -1,5 +1,7 @@
 export class GameInfo {
   title!: string
+  holder!: string
+  deadline!: string
   holdAmount!: number
   holdSymbol!: string
 }
@@ -9,5 +11,5 @@ export class ActionRecord {
   address!: string
   amount!: number
   symbol!: string
-  deadline!: string
+  timestamp!: string
 }

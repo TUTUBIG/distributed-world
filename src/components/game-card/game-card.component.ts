@@ -5,7 +5,7 @@ import {ScrollViewComponent} from '../scrollview/scroll-view.component';
 @Component({
   selector: 'app-game-card',
   imports: [
-    ScrollViewComponent
+    ScrollViewComponent,
   ],
   templateUrl: './game-card.component.html',
   standalone: true,
