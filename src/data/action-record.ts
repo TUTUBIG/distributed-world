@@ -22,3 +22,20 @@ export class HistoryRecord {
   timestamp!: string
   transactionHash!: string
 }
+
+export class UserActivities {
+  name!: string
+  avatar!: string
+  action!: string
+  amount!: number
+  symbol!: string
+  address!: string
+  timestamp!: string
+  refundable!:boolean
+}
+
+export class UserDiscussion {
+  name!: string
+  avatar!: string
+  text!: string
+}

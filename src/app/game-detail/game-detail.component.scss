@@ -1,0 +1,205 @@
+@use '../../styles' as global;
+
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  min-height: 70vh;
+  max-width: 80%;
+}
+
+.above {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+  height: 450px;
+  align-items: center;
+  .image {
+    width: 400px;
+    height: 400px;
+    background-image: url("/game.png");
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      justify-content: center;
+      height: fit-content;
+    }
+    .prize {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      .label {
+        background-color: global.$secondary-color;
+        width: 3rem;
+        padding: 0.5rem;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .amount {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        align-items: center;
+        height: fit-content;
+        span {
+          font-size: larger;
+          font-weight: bold;
+        }
+      }
+    }
+    .properties {
+      font-size: medium;
+      color: global.$secondary-text-color;
+      width: 100%;
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .description {
+      border: whitesmoke solid thin;
+      border-radius: 10px;
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      button {
+        width: 70%;
+        height: 2rem;
+        border-style: none;
+        border-radius: 8px;
+        background-color: global.$primary-color;
+        box-shadow: whitesmoke 4px 4px 5px 1px;
+        &:hover {
+          background-color: global.$primary-hover-color;
+        }
+      }
+    }
+  }
+}
+
+.below {
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  .activities {
+    display: flex;
+    gap: 15px;
+    width: 45%;
+    flex-direction: column;
+    align-items: flex-start;
+    .activity {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      box-shadow: whitesmoke 4px 4px 5px 1px;
+      border-radius: 8px;
+      padding: 5px;
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .title {
+          display: flex;
+          gap: 10px;
+          font-size: larger;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          color: global.$secondary-text-color;
+        }
+      }
+    }
+  }
+
+  .discussions {
+    display: flex;
+    gap: 15px;
+    width: 45%;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: whitesmoke 4px 4px 5px 1px;
+    border-radius: 10px;
+    padding: 0 20px;
+  }
+}
+
+.discussion {
+  display: flex;
+  .frame {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    gap: 0.5rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 0 10px;
+    align-items: center;
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 5px 0;
+      width: 80%;
+      .title {
+        font-size: larger;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        box-shadow: none;
+        padding: 0;
+      }
+      .content {
+        color: global.$secondary-text-color;
+        width: 100%;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.discussion.reverse {
+  flex-direction: row-reverse;
+  .frame {
+    background-color: global.$secondary-color;
+  }
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+  span {
+    width: 80%;
+    box-shadow: global.$secondary-text-color 0 0 5px 2px;
+    padding: 0 10px;
+    border-radius: 10px;
+    input {
+      width: 100%;
+      border-style: none;
+    }
+  }
+
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}

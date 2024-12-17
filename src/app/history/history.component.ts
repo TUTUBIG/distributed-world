@@ -8,8 +8,6 @@ import {PaginationComponent} from '../../components/pagination/pagination.compon
   selector: 'app-history',
   imports: [
     NgForOf,
-    NgIf,
-    MatPaginator,
     PaginationComponent,
   ],
   templateUrl: './history.component.html',

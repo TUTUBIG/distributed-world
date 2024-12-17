@@ -1,0 +1,91 @@
+<main class="main">
+  <div class="above">
+    <div class="above image">
+      <span class="favorite"></span>
+    </div>
+    <div class="above info">
+      <span class="above info title">Little Rabbit</span>
+      <div class="above info prize">
+        <span class="label">Prize</span>
+        <div class="above info prize amount">
+          <span>50</span>
+          <span>ETH</span>
+          <span>/</span>
+          <span style="font-size: smaller">$</span>
+          <span style="font-size: medium">10,0000</span>
+        </div>
+      </div>
+      <div class="properties">
+        <div>
+          <span>Holder</span>
+          <span>0xassdfdafdffasdfdas</span>
+        </div>
+        <div>
+          <span>Highest Bid</span>
+          <div>
+            <span>40</span>
+            <span>ETH</span>
+          </div>
+        </div>
+        <div>
+          <span>Deadline</span>
+          <span>Dec 10 12:00PM</span>
+        </div>
+      </div>
+      <div class="description">
+        <h4>Description</h4>
+        <p>Answer the frequently asked question in a simple sentence, a longish paragraph, or event in a list.</p>
+      </div>
+      <div class="button">
+        <button>Bid</button>
+      </div>
+    </div>
+  </div>
+  <div class="below">
+    <div class="activities">
+      <h4>Activities</h4>
+      <div class="activity" *ngFor="let activity of activities">
+        <div class="avatar">
+          <img [ngSrc]="activity.avatar" width="50" height="50" alt="{{activity.name}}"/>
+        </div>
+        <div class="info">
+          <div class="title">
+            <span>Bid</span>
+            <div class="amount">
+              <span>40</span>
+              <span>ETH</span>
+            </div>
+          </div>
+          <div class="content">
+            <span>0x000000000000000</span>
+            <span>Dec 10 12:00PM</span>
+          </div>
+          <span *ngIf="activity.refundable">Refund</span>
+        </div>
+      </div>
+    </div>
+    <div class="discussions">
+      <h4>Discussions</h4>
+      <div style="width: 100%" *ngFor="let discussion of discussions">
+        <div class="discussion" [ngClass]="{ 'reverse': discussion.name === 'Alvin Liu' }">
+          <div class="discussion frame" >
+            <div class="avatar">
+              <img [ngSrc]="discussion.avatar" width="50" height="50" alt="{{discussion.name}}"/>
+            </div>
+            <div class="discussion content info">
+              <span class="discussions discussion info title">{{ discussion.name }}</span>
+              <div class="content">
+                <p>{{discussion.text}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="input">
+        <span>
+          <input placeholder="Say something" />
+        </span>
+      </div>
+    </div>
+  </div>
+</main>
