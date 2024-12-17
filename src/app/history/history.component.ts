@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {HistoryRecord} from '../../data/action-record';
-import {NgForOf, NgIf} from '@angular/common';
-import {MatPaginator} from '@angular/material/paginator';
+import {NgForOf} from '@angular/common';
 import {PaginationComponent} from '../../components/pagination/pagination.component';
 
 @Component({

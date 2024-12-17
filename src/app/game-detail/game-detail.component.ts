@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {HistoryRecord, UserActivities, UserDiscussion} from '../../data/action-record';
+import {UserActivities, UserDiscussion} from '../../data/action-record';
 import {NgClass, NgForOf, NgIf, NgOptimizedImage} from '@angular/common';
 
 @Component({
