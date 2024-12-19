@@ -1,0 +1,15 @@
+<main class="main" *ngIf="isVisible">
+  <div class="content">
+    <div>
+      <div class="title">
+        <span>Bid Amount ({{ symbol }})</span>
+        <span class="cross" (click)="close()">
+          <img ngSrc="/icons/cross.svg" alt="close" width="30" height="30" />
+        </span>
+      </div>
+      <p class="description">A bid amount should be larger than the most number {{ topAmount }} And also should be an integer multiple of {{ stepAmount }}</p>
+    </div>
+    <input class="input" placeholder="{{ topAmount + stepAmount }}" />
+    <button class="button" (click)="confirm()">Confirm</button>
+  </div>
+</main>

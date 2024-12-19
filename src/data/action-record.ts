@@ -39,3 +39,8 @@ export class UserDiscussion {
   avatar!: string
   text!: string
 }
+
+export class ClaimBid {
+  amount!: number
+  timestamp!: string
+}

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {UserActivities, UserDiscussion} from '../../data/action-record';
 import {NgClass, NgForOf, NgIf, NgOptimizedImage} from '@angular/common';
+import {ClaimRefundComponent} from '../../components/claim-refund/claim-refund.component';
 
 @Component({
   selector: 'app-game-detail',
@@ -8,13 +9,16 @@ import {NgClass, NgForOf, NgIf, NgOptimizedImage} from '@angular/common';
     NgForOf,
     NgIf,
     NgOptimizedImage,
-    NgClass
+    NgClass,
+    ClaimRefundComponent
   ],
   templateUrl: './game-detail.component.html',
   standalone: true,
   styleUrl: './game-detail.component.scss'
 })
 export class GameDetailComponent {
+  @ViewChild(ClaimRefundComponent) dialog!: ClaimRefundComponent
+
   activities: UserActivities[] = [
     {
       name: '',
@@ -44,7 +48,7 @@ export class GameDetailComponent {
       symbol: 'ETH',
       address: '0xdafewrfqdsa33233dsdaa',
       timestamp: 'Dec 10 12:00',
-      refundable: false
+      refundable: true
     }
   ];
   discussions: UserDiscussion[] = [
@@ -74,4 +78,7 @@ export class GameDetailComponent {
       text: 'Nice to meet you'
     },
   ];
+  openDialog() {
+    this.dialog.open();
+  };
 }

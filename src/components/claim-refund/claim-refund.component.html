@@ -1,0 +1,23 @@
+<main class="main" *ngIf="isVisible">
+  <div class="content">
+    <div class="info">
+      <div class="title">
+        <span>Claim Refund ({{ symbol }})</span>
+        <span class="cross" (click)="close()">
+          <img ngSrc="/icons/cross.svg" alt="close" width="30" height="30" />
+        </span>
+      </div>
+      <div *ngFor="let bid of bids">
+        <div class = "bid">
+          <span>{{ bid.amount }} {{ symbol }}</span>
+          <span>{{ bid.timestamp }}</span>
+        </div>
+      </div>
+      <div class="total">
+        <span>Total Amount</span>
+        <span>{{ totalAmount }} {{ symbol }}</span>
+      </div>
+    </div>
+    <button class="button" (click)="confirm()">Confirm</button>
+  </div>
+</main>

@@ -60,9 +60,10 @@
             <span>0x000000000000000</span>
             <span>Dec 10 12:00PM</span>
           </div>
-          <span *ngIf="activity.refundable">Refund</span>
+          <span class="tag" *ngIf="activity.refundable" (click)="openDialog()">Refund</span>
         </div>
       </div>
+      <app-claim-refund></app-claim-refund>
     </div>
     <div class="discussions">
       <h4>Discussions</h4>
